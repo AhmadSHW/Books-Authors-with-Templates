@@ -92,7 +92,7 @@ def author_detail(request, author_id):
 	"" "" ""
 
 	"" "" ""
-	author = get_object_or_404(Author, id-author_id)
+	author = get_object_or_404(Author, id=author_id)
 	
 	
 	#BONUS:
@@ -116,4 +116,4 @@ def add_book_to_author(request, author_id):
 
 		author.books.add(book)
 
-	return redirect('authors_detail', author_id=author_id)
+	return redirect('author_detail', author_id=author_id)
